@@ -55,6 +55,10 @@ const HomePage = () => {
           {/* S09 AI Software Zone */}
           <AIZone />
 
+          {/* S10 Awards Center — 3D Trophy Wall */}
+          <AwardsCenter />
+
+
           {/* Remaining curated industry rows (S11+ vendor markets) */}
           {remaining.map(section => {
             const filtered = products.filter(section.filter);
