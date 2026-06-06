@@ -7,6 +7,7 @@ import { LiveChatWidget } from '@/components/marketplace/LiveChatWidget';
 import {
   QuickActionCards, LiveStats, IndustryGrid, AIZone, FinalCTA,
 } from '@/components/marketplace/HomeSections';
+import { AwardsCenter } from '@/components/marketplace/AwardsCenter';
 import { products, sections } from '@/lib/marketplaceData';
 
 const HomePage = () => {
@@ -53,6 +54,10 @@ const HomePage = () => {
 
           {/* S09 AI Software Zone */}
           <AIZone />
+
+          {/* S10 Awards Center — 3D Trophy Wall */}
+          <AwardsCenter />
+
 
           {/* Remaining curated industry rows (S11+ vendor markets) */}
           {remaining.map(section => {
