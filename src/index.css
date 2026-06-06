@@ -4,54 +4,57 @@
 
 @layer base {
   :root {
-    /* Deep navy premium dashboard palette (refs: Lepus / Orion / AIZCRM) */
-    --background: 240 30% 8%;
-    --foreground: 220 25% 96%;
+    /* Software Vala locked palette
+       bg #050816 · card #0B1225 · blue #00D4FF · purple #8B5CFF · gold #FFD700 */
+    --background: 230 73% 6%;          /* #050816 */
+    --foreground: 0 0% 100%;           /* #FFFFFF */
 
-    --card: 240 28% 11%;
-    --card-foreground: 220 25% 96%;
+    --card: 226 53% 9%;                /* #0B1225 */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 240 30% 10%;
-    --popover-foreground: 220 25% 96%;
+    --popover: 226 53% 9%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 265 85% 65%;
-    --primary-foreground: 240 30% 8%;
+    --primary: 258 100% 68%;           /* #8B5CFF purple */
+    --primary-foreground: 230 73% 6%;
 
-    --secondary: 240 25% 16%;
-    --secondary-foreground: 220 20% 92%;
+    --secondary: 226 45% 14%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 22% 15%;
-    --muted-foreground: 230 15% 65%;
+    --muted: 226 40% 13%;
+    --muted-foreground: 226 25% 70%;
 
-    --accent: 190 95% 55%;
-    --accent-foreground: 240 30% 8%;
+    --accent: 188 100% 50%;            /* #00D4FF cyan-blue */
+    --accent-foreground: 230 73% 6%;
 
     --destructive: 0 80% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 250 40% 22%;
-    --input: 240 30% 14%;
-    --ring: 265 90% 70%;
+    --border: 226 45% 20%;
+    --input: 226 45% 14%;
+    --ring: 188 100% 50%;
 
-    --radius: 0.75rem;
+    --radius: 1.125rem;                /* 18px premium */
 
-    /* Sidebar: deep indigo with neon cyan/purple active state (matches refs) */
-    --sidebar-background: 245 45% 5%;
-    --sidebar-foreground: 230 25% 78%;
-    --sidebar-primary: 265 90% 68%;
+    /* Sidebar — glass black per spec */
+    --sidebar-background: 230 73% 4%;
+    --sidebar-foreground: 226 25% 78%;
+    --sidebar-primary: 258 100% 68%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 250 40% 14%;
-    --sidebar-accent-foreground: 190 100% 70%;
-    --sidebar-border: 250 40% 16%;
-    --sidebar-ring: 265 90% 70%;
+    --sidebar-accent: 226 45% 12%;
+    --sidebar-accent-foreground: 188 100% 65%;
+    --sidebar-border: 226 45% 16%;
+    --sidebar-ring: 188 100% 50%;
 
     --mp-success: 145 70% 50%;
-    --mp-warning: 38 95% 60%;
+    --mp-warning: 51 100% 50%;          /* gold */
     --mp-error: 0 80% 60%;
-    --mp-info: 190 95% 55%;
-    --mp-gold: 45 90% 60%;
-    --mp-purple: 265 85% 65%;
+    --mp-info: 188 100% 50%;            /* blue */
+    --mp-gold: 51 100% 50%;             /* #FFD700 */
+    --mp-purple: 258 100% 68%;          /* #8B5CFF */
+    --mp-blue: 188 100% 50%;            /* #00D4FF */
   }
+
 
   .light {
     --background: 220 30% 97%;
@@ -88,27 +91,29 @@
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
     background-image:
-      radial-gradient(ellipse at top left, hsl(265 85% 25% / 0.15), transparent 50%),
-      radial-gradient(ellipse at bottom right, hsl(190 95% 30% / 0.12), transparent 55%);
+      radial-gradient(ellipse at top left, hsl(258 100% 30% / 0.18), transparent 55%),
+      radial-gradient(ellipse at bottom right, hsl(188 100% 35% / 0.15), transparent 55%),
+      radial-gradient(ellipse at center, hsl(51 100% 50% / 0.04), transparent 70%);
     background-attachment: fixed;
   }
 
-  /* Premium card glow + crisp dividers using token colors only */
+  /* Premium card glow — cyan/purple ring with deep shadow */
   .bg-card,
   [class*="bg-card"] {
     box-shadow:
       0 0 0 1px hsl(var(--border) / 0.6),
-      0 8px 28px -12px hsl(265 90% 30% / 0.45),
-      0 0 40px -20px hsl(190 100% 50% / 0.25);
+      0 10px 32px -14px hsl(258 100% 30% / 0.55),
+      0 0 48px -22px hsl(188 100% 50% / 0.28);
   }
   hr, [role="separator"] {
     background: linear-gradient(90deg,
       transparent,
       hsl(var(--border)) 20%,
-      hsl(265 90% 60% / 0.4) 50%,
+      hsl(258 100% 68% / 0.45) 50%,
       hsl(var(--border)) 80%,
       transparent);
     border: 0;
     height: 1px;
   }
 }
+
