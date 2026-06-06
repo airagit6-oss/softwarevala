@@ -7,6 +7,7 @@ import { LiveChatWidget } from '@/components/marketplace/LiveChatWidget';
 import {
   QuickActionCards, LiveStats, IndustryGrid, AIZone, FinalCTA,
 } from '@/components/marketplace/HomeSections';
+import { AwardsCenter } from '@/components/marketplace/AwardsCenter';
 import { products, sections } from '@/lib/marketplaceData';
 
 const HomePage = () => {
